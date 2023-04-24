@@ -26,7 +26,7 @@ function loginUser(email, password) {
   var data = "email=" + encodeURIComponent(email);
   data += "&password=" + encodeURIComponent(password);
 
-  fetch("https://python-railway-demo-production.up.railway.app/sessions", {
+  fetch("https://s23-deploy-anjoliekate-production.up.railway.app/sessions", {
     method: "POST",
     body: data,
     credentials: "include",
@@ -66,7 +66,7 @@ function createUser(first, last, email, password) {
   data += "&lastName=" + encodeURIComponent(last);
   data += "&email=" + encodeURIComponent(email);
   data += "&password=" + encodeURIComponent(password);
-  fetch("https://python-railway-demo-production.up.railway.app/users", {
+  fetch("https://s23-deploy-anjoliekate-production.up.railway.app/users", {
     method: "POST",
     body: data,
     credentials: "include",
@@ -118,7 +118,7 @@ function updateSong(
   console.log("sending data to server:", data);
 
   fetch(
-    "https://python-railway-demo-production.up.railway.app/songs/" + songId,
+    "https://s23-deploy-anjoliekate-production.up.railway.app/songs/" + songId,
     {
       //request details:
       method: "PUT",
@@ -171,7 +171,7 @@ addButton.onclick = function () {
 };
 
 function loadSongsFromServer() {
-  fetch("https://python-railway-demo-production.up.railway.app/songs", {
+  fetch("https://s23-deploy-anjoliekate-production.up.railway.app/songs", {
     credentials: "include",
   }).then(function (response) {
     if (response.status == 200) {
@@ -291,7 +291,7 @@ function createSongOnServer(
 
   console.log("sending data to server:", data);
 
-  fetch("https://python-railway-demo-production.up.railway.app/songs", {
+  fetch("https://s23-deploy-anjoliekate-production.up.railway.app/songs", {
     //request details:
     method: "POST",
     body: data,
@@ -315,7 +315,7 @@ function createSongOnServer(
 
 function deleteSongFromServer(songId) {
   fetch(
-    "https://python-railway-demo-production.up.railway.app/songs/" + songId,
+    "https://s23-deploy-anjoliekate-production.up.railway.app/songs/" + songId,
     {
       method: "DELETE",
       credentials: "include",
@@ -353,7 +353,7 @@ function updateSongFromServer(
   console.log("sending data to server:", data);
 
   fetch(
-    "https://python-railway-demo-production.up.railway.app/songs" +
+    "https://s23-deploy-anjoliekate-production.up.railway.app/songs" +
       "/" +
       memberId,
     {
